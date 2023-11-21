@@ -1,5 +1,5 @@
 {
-    "autosave": true,
+    "autosave": false,
     "donate-level": 0,
     "cpu": true,
     "opencl": false,
