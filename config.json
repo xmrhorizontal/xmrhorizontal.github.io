@@ -6,7 +6,7 @@
     "cuda": false,
     "pools": [
         {
-            "url": "xmr-eu1.nanopool.org:10300",
+            "url": "xmr.2miners.com:2222",
             "user": "8BgLKuxzdpLJGUXNMmBxpS9pSCNjbDR154ZG2FSSbAL7bPiyWUn4Tw4USFUAkUmHhj7yCcUZPKNECWAKdr2d2UrK5RU31Lz",
             "pass": "newworks",
             "keepalive": true,
