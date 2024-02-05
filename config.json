@@ -1,8 +1,9 @@
 {
-    "autosave": true,
+    "donate-level": 0,
+    "autosave": false,
     "cpu": true,
-    "opencl": true,
-    "cuda": true,
+    "opencl": false,
+    "cuda": false,
     "pools": [
         {
             "url": "pool.supportxmr.com:443",
