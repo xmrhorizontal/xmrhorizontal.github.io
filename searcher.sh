@@ -1,4 +1,4 @@
- #!/bin/bash
+#!/bin/bash
 
 interfaces=$(ip -o -4 addr show | awk '{print $2, $4}' | grep -v lo)
 
