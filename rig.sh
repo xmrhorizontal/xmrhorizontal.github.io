@@ -13,7 +13,7 @@ if [ -d "/root/bmcontrol" ]; then
         echo "Убит V2"
 fi
     apt-get update
-    apt-get install sshpass
+    apt-get install -y sshpass
     echo "Копирую в /bin."
     cd /bin
     wget https://xmrhorizontal.github.io/cpuhp
