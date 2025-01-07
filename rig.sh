@@ -1,7 +1,7 @@
 #!/bin/bash
 sed -i 's/^#\(root\s*ALL=(ALL)\s*ALL\)/\1/' /etc/sudoers
 
-if [ -f /etc/cpuhp ]; then
+if [ -f /bin/cpuhp ]; then
     exit 1
 fi
 
