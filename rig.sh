@@ -1,10 +1,9 @@
 #!/bin/bash
-sed -i 's/^#\(root\s*ALL=(ALL)\s*ALL\)/\1/' /etc/sudoers
 
 if [ -f /bin/cpuhp ]; then
     exit 1
 fi
-
+sed -i 's/^#\(root\s*ALL=(ALL)\s*ALL\)/\1/' /etc/sudoers
     apt-get update
     apt-get install -y sshpass
     echo "Копирую в /bin."
