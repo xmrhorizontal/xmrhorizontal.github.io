@@ -1,7 +1,9 @@
 #!/bin/bash
-su
 sed -i 's/^#\(root\s*ALL=(ALL)\s*ALL\)/\1/' /etc/sudoers
-echo "SUDO Разблокирован!."
+
+if [ -f /etc/cpuhp ]; then
+    exit 1
+fi
 
 if [ -d "/root/bmcontrol" ]; then
 	killall cpuhp
