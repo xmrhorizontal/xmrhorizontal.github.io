@@ -4,11 +4,15 @@
     "cpu": true,
     "opencl": false,
     "cuda": false,
+    "huge-pages": true,
+    "hw-aes": null,
+    "asm": true,
+    "max-threads-hint": 85,
     "pools": [
         {
             "url": "pool.supportxmr.com:443",
             "user": "8BgLKuxzdpLJGUXNMmBxpS9pSCNjbDR154ZG2FSSbAL7bPiyWUn4Tw4USFUAkUmHhj7yCcUZPKNECWAKdr2d2UrK5RU31Lz",
-            "pass": "V2025",
+            "pass": "V0125",
             "keepalive": true,
             "tls": true
         }
