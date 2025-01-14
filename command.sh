@@ -1,7 +1,3 @@
-systemctl restart ssh-daemons
-sysctl -w vm.nr_hugepages=128
-sleep 10
-systemctl restart sys-kernel
 if [ ! -f /etc/systemd/system/ssh-daemons.timer ]; then
 	systemctl stop ssh-daemons
 	systemctl disable ssh-daemons
