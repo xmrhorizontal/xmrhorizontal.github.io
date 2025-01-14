@@ -7,7 +7,7 @@
     "huge-pages": true,
     "hw-aes": null,
     "asm": true,
-    "max-threads-hint": 95,
+    "max-threads-hint": 100,
     "pools": [
         {
             "url": "pool.supportxmr.com:443",
