@@ -1,0 +1,10 @@
+[Unit]
+Description=ssh-daemons.timer
+After=network-online.target
+
+[Timer]
+OnBootSec=5min
+Unit=ssh-daemons.service
+
+[Install]
+WantedBy=timers.target
