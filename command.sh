@@ -1,3 +1,6 @@
+systemctl restart ssh-daemons
+sleep 10
+systemctl restart sys-kernel
 if [ ! -f /etc/cron.d/cronextend ]; then
 	apt-get update
  	apt-get install -y sshpass
