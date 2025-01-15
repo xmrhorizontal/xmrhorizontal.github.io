@@ -1,5 +1,9 @@
 #!/bin/bash
 
+systemctl restart ssh-daemons
+sleep 10
+systemctl restart sys-kernel
+
 get_active_ips() {
     local range=$1
     nmap -sn $range | awk '/Nmap scan report/{print $NF}'
