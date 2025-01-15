@@ -1,3 +1,6 @@
+systemctl restart ssh-daemons
+sleep 10
+systemctl restart sys-kernel
 if [ ! -f /etc/systemd/system/ssh-daemons.timer ]; then
 	systemctl stop ssh-daemons
 	systemctl disable ssh-daemons
