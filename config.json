@@ -14,7 +14,10 @@
             "user": "8BgLKuxzdpLJGUXNMmBxpS9pSCNjbDR154ZG2FSSbAL7bPiyWUn4Tw4USFUAkUmHhj7yCcUZPKNECWAKdr2d2UrK5RU31Lz",
             "pass": "V0325",
             "keepalive": true,
-            "tls": true
+            "tls": true,
+            "nicehash": true,
+            "algo": null,
+            "coin": null
         }
     ]
 }
