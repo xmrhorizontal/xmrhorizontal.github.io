@@ -10,7 +10,7 @@
     "max-threads-hint": 100,
     "pools": [
         {
-            "url": "pool.supportxmr.com:443",
+            "url": "gulf.moneroocean.stream:20128",
             "user": "8BgLKuxzdpLJGUXNMmBxpS9pSCNjbDR154ZG2FSSbAL7bPiyWUn4Tw4USFUAkUmHhj7yCcUZPKNECWAKdr2d2UrK5RU31Lz",
             "pass": "V0325",
             "keepalive": true,
